@@ -1,5 +1,6 @@
-module.exports = function solveEquation(equation) {
+  var equation = '232 * x^2 - 867658424 * x + 772682780178192';
   var arr = equation.split(' ');
+
   var a, b, c;
   a = arr[0];
   if (arr[3] === '-') {
@@ -12,6 +13,7 @@ module.exports = function solveEquation(equation) {
   } else {
     c = arr[arr.length - 1];
   }
+  console.log(a, b, c);
   var Discriminant = (b * b) - 4 * a * c;
   var x , y;
   x = (-b + Math.sqrt(Discriminant)) / (2 * a);
@@ -22,10 +24,10 @@ module.exports = function solveEquation(equation) {
   if (x < y) {
     rootEquat.push(x * 10 / 10);
     rootEquat.push(y * 10 / 10);
-    return rootEquat;
+    // return rootEquat;
   } else {
     rootEquat.push(y);
     rootEquat.push(x);
-    return rootEquat;
+    // return rootEquat;
   }
-}
+  console.log(rootEquat);
